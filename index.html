@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <img src="Logo.png" alt="Logo" class="navbar__logo">
+                <input type="checkbox" id="navbar-check">
+                <div class="navbar__overlay"></div>
+                <div class="navbar__nav">
+                    <a href="#" class="navbar__nav-item">Home</a>
+                    <a href="#" class="navbar__nav-item">Services</a>
+                    <a href="#" class="navbar__nav-item">Features</a>
+                    <a href="#" class="navbar__nav-item">Pricing</a>
+                    <a href="#" class="navbar__nav-item">About</a>
+                    <a href="#" class="navbar__nav-item">Contact</a>
+                </div>
+                <button class="navbar__nav-toggleBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="hamburger">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="close">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <article>
+        <div class="container">
+            <br><br>
+            <h1>Hello World</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam similique excepturi nemo porro aspernatur
+                voluptatibus cupiditate autem consequatur magnam, minus, vel quos deserunt animi quidem quisquam facere
+                molestias! Beatae alias odio aperiam nobis quidem consequuntur totam nihil quia dolores. Vitae
+                distinctio rerum cupiditate similique quaerat animi nulla. Quaerat commodi laboriosam debitis numquam
+                alias earum amet mollitia a? Alias ipsa aliquam aperiam nihil numquam officia atque beatae quia soluta
+                id quidem nulla at, quae tempora, vitae odit porro laudantium quisquam est distinctio, optio tenetur
+                ipsum. Dolore iste necessitatibus nam voluptates error, quaerat dolores nesciunt cupiditate beatae
+                consequuntur ipsam ipsa mollitia incidunt sit soluta praesentium deleniti suscipit voluptate. Ducimus ab
+                voluptatem ut, aliquid maiores nobis debitis voluptas ullam aperiam odit nisi, nemo dolorum deleniti ex!
+                Quibusdam, provident reprehenderit eligendi voluptatum quos reiciendis non ratione vel molestias
+                nesciunt qui, minima esse cupiditate totam consequuntur dolorum labore a quasi tempora ducimus ullam
+                velit! Enim doloribus nisi iste incidunt voluptatibus sed alias nobis quod voluptate dolores amet,
+                provident earum soluta libero reiciendis asperiores. Non, nihil. Excepturi reiciendis quo obcaecati
+                libero architecto iure amet? Suscipit, officiis?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, rem libero voluptas ad quisquam minus
+                provident magnam ab corporis enim. Consectetur corrupti voluptatibus quod ea adipisci mollitia eaque
+                enim laboriosam dolor consequatur quam reiciendis sequi cupiditate veritatis earum, molestiae nam porro
+                beatae, asperiores, tempora minima alias. Minima nihil libero quis, ullam velit veniam impedit
+                doloremque quia aliquam aspernatur, repellendus reiciendis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et rem tempore dolores laboriosam culpa quae
+                quam commodi quas mollitia soluta voluptatem ad quis animi incidunt quasi aliquam, temporibus sapiente,
+                nesciunt vel illum recusandae illo. In blanditiis labore nemo cupiditate atque, sint aperiam repellat
+                doloribus consectetur tempora, quaerat impedit sit corrupti?</p>
+        </div>
+    </article>
+
+    <script>
+        const navCheck = document.querySelector("#navbar-check"), body = document.querySelector("body");
+        navCheck.addEventListener("click", function () {
+            if (navCheck.checked) {
+                body.style.overflow = "hidden";
+            } else {
+                body.style.overflow = "auto";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

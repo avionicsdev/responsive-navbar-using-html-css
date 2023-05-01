@@ -1,0 +1,142 @@
+:root {
+    --primary: #7420D3;
+    --primary-light: #8a27fb;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: var(--primary);
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    position: relative;
+}
+
+.navbar__logo {
+    height: 40px;
+}
+
+.navbar__nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.navbar__nav-item {
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 8px;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: all 0.4s;
+}
+
+.navbar__nav-item:hover {
+    background-color: var(--primary-light);
+}
+
+.navbar__nav-toggleBtn,
+#navbar-check {
+    display: none;
+    ;
+}
+
+@media screen and (max-width: 700px) {
+
+    /* styles */
+    .navbar__overlay {
+        position: fixed;
+        top: 72px;
+        left: -150%;
+        width: 100%;
+        height: calc(100vh - 72px);
+        background-color: #222;
+        transition: all 0.4s;
+    }
+
+    #navbar-check:checked~.navbar__overlay {
+        left: 0;
+    }
+
+    .navbar__nav {
+        position: absolute;
+        background-color: #222;
+        top: 100%;
+        left: -150%;
+        flex-direction: column;
+        width: 100%;
+        padding: 16px;
+        transition: all 0.4s;
+    }
+
+    #navbar-check:checked~.navbar__nav {
+        left: 0;
+    }
+
+    .navbar__nav-item {
+        width: 100%;
+        padding: 8px 16px;
+    }
+
+    .navbar__nav-toggleBtn {
+        width: 36px;
+        height: 36px;
+        color: #fff;
+        background-color: transparent;
+        border: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .navbar__nav-toggleBtn:hover,
+    #navbar-check:checked~.navbar__nav-toggleBtn {
+        background-color: #fff;
+        color: var(--primary);
+    }
+
+    #navbar-check:checked~.navbar__nav-toggleBtn>.hamburger,
+    #navbar-check~.navbar__nav-toggleBtn>.close {
+        display: none;
+    }
+
+    #navbar-check:checked~.navbar__nav-toggleBtn>.close,
+    #navbar-check~.navbar__nav-toggleBtn>.hamburger {
+        display: initial;
+    }
+
+    #navbar-check {
+        display: initial;
+        position: absolute;
+        right: 0;
+        width: 36px;
+        height: 36px;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
